@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hotel_app/screens/models/onboarding_content.dart';
+import 'package:hotel_app/screens/onboarding/models/onboarding_content.dart';
 import 'package:hotel_app/screens/register_screen.dart';
 import 'package:hotel_app/util/app_color.dart';
 import 'package:hotel_app/util/navigator/page_navigator.dart';

@@ -6,14 +6,16 @@ import 'package:hotel_app/widgets/small_text.dart';
 
 class ReusableAppBar extends StatelessWidget {
   final String titleText;
-  final ThemeMode currentThemeMode;
+  // final ThemeMode currentThemeMode;
   final double titleFontSize;
   final VoidCallback onTapNotificationIcon;
   final bool willContainNotificationIcon;
-  const ReusableAppBar({
+  Widget? leading;
+  ReusableAppBar({
     Key? key,
     required this.titleText,
-    required this.currentThemeMode,
+    this.leading,
+    // required this.currentThemeMode,
     required this.titleFontSize,
     required this.onTapNotificationIcon,
     this.willContainNotificationIcon = true,
@@ -23,15 +25,13 @@ class ReusableAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      leading: leading,
       automaticallyImplyLeading: true,
       title: SmallText(
-        text: titleText,
-        fontWeight: FontWeight.bold,
-        size: titleFontSize,
-        color: currentThemeMode == ThemeMode.light
-            ? AppColor.blackColor
-            : AppColor.whiteColor,
-      ),
+          text: titleText,
+          fontWeight: FontWeight.bold,
+          size: titleFontSize,
+          color: AppColor.blackColor),
       actions: [
         willContainNotificationIcon == true
             ? IconButton(

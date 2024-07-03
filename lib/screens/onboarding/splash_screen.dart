@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hotel_app/screens/onboarding_screen.dart';
+import 'package:hotel_app/screens/onboarding/onboarding_screen.dart';
 import 'package:hotel_app/util/app_color.dart';
 import 'package:hotel_app/util/navigator/page_navigator.dart';
 import 'package:hotel_app/widgets/height_spacer.dart';

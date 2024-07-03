@@ -1,19 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_app/screens/onboarding_screen.dart';
-import 'package:hotel_app/screens/splash_screen.dart';
+import 'package:hotel_app/screens/landing_screen.dart';
+import 'package:hotel_app/screens/onboarding/onboarding_screen.dart';
+import 'package:hotel_app/screens/onboarding/splash_screen.dart';
+
+import '../screens/auth/personal_info.dart';
 
 class AppRoutes {
   // Route names
   static const String splashScreen = 'splashScreen';
-  static const String bottomNavScreen = 'bottomNavScreen';
+  static const String landingscreen = 'landingscreen';
   static const String emailAuth = 'emailAuth';
   static const String onboardingScreen = 'onboardingScreen';
+  static const String userInfo = 'userInfo';
 
   // Define routes using named routes
   static Map<String, WidgetBuilder> routes = {
     splashScreen: (context) => const SplashScreen(),
-    // bottomNavScreen: (context) => LandingScreen(),
-    //emailAuth: (context) => EmailAuth(),
+    landingscreen: (context) => const LandingScreen(
+          firstName: '',
+        ),
+    userInfo: (context) => const PersonalInfoScreen(
+          email: '',
+          password: '',
+        ),
   };
 
   // Generate routes dynamically

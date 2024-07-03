@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/res/app_strings.dart';
 
 class SmallText extends StatelessWidget {
@@ -9,6 +10,7 @@ class SmallText extends StatelessWidget {
   final TextAlign align;
   final TextDecoration decoration;
   final FontStyle? style;
+  final TextOverflow? overflow;
 
   const SmallText({
     Key? key,
@@ -19,6 +21,7 @@ class SmallText extends StatelessWidget {
     this.align = TextAlign.left,
     this.decoration = TextDecoration.none,
     this.style,
+    this.overflow,
   }) : super(key: key);
 
   @override
@@ -30,7 +33,7 @@ class SmallText extends StatelessWidget {
       style: TextStyle(
         fontStyle: style,
         color: color,
-        fontSize: size,
+        fontSize: size.sp,
         fontFamily: AppStrings.poppins,
         fontWeight: fontWeight,
         decoration: decoration,

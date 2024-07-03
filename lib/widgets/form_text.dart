@@ -55,7 +55,7 @@ class FormText extends StatelessWidget {
     this.borderWidth = 0.5,
     this.suffixIcon,
     this.iconColor,
-    this.textColor = Colors.black,
+    this.textColor = Colors.white,
     this.prefixIcon,
     this.borderColor,
     this.filled = true,
@@ -67,7 +67,6 @@ class FormText extends StatelessWidget {
     this.maxLines = 1,
     this.contentPadding,
     this.textViewTitle = '',
-    required TextStyle hintStyle,
   }) : super(key: key);
 
   OutlineInputBorder _border(BuildContext context) => OutlineInputBorder(
@@ -111,7 +110,7 @@ class FormText extends StatelessWidget {
                     borderRadius: BorderRadius.circular(borderRadius),
                     borderSide: BorderSide(
                         width: borderWidth,
-                        color: AppColor.lightcolor,
+                        color: AppColor.whiteColor,
                         style: BorderStyle.solid)),
                 focusedErrorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(borderRadius),
@@ -123,7 +122,7 @@ class FormText extends StatelessWidget {
                 errorBorder: _border(context),
                 disabledBorder: _border(context),
                 hintText: hintText,
-                hintStyle: TextStyle(color: Colors.grey, fontSize: 13.5),
+                hintStyle: const TextStyle(color: Colors.white, fontSize: 13.5),
                 labelText: labelText,
                 contentPadding: contentPadding,
                 labelStyle: TextStyle(
