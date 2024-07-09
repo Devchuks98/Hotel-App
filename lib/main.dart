@@ -63,7 +63,7 @@ class _HotelAppState extends State<HotelApp> {
           debugShowCheckedModeBanner: false,
           title: AppStrings.appName,
           routes: AppRoutes.routes,
-          initialRoute: AppRoutes.userInfo,
+          initialRoute: AppRoutes.splashScreen,
           onGenerateRoute: AppRoutes.generateRoute,
         );
       },
